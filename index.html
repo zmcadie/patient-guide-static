@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>LA Patient Guide</title>
+  <meta name="author" content="">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <base href="https://zmcadie.github.io/la-patient-guide/" />
+  <script>
+    // if running locally use path served by [http-server](https://www.npmjs.com/package/http-server)
+    if (window.location.origin === "http://127.0.0.1:8080") {
+      document.querySelector("base").href = "http://127.0.0.1:8080"
+    }
+  </script>
+
+  <!-- <script type="module" src="./components/index.js"></script> -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.20.1/cdn/themes/light.css" />
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.20.1/cdn/shoelace-autoloader.js"></script>
+
+  <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body style="transition: 0.1s; opacity: 0;">
+  <sl-button class="escape-button" outline size="small" variant="neutral" onclick="document.body.classList.add('escape')" href="https://youtube.com/">EXIT</sl-button>
+  <sl-tab-group id="page-nav">
+    <sl-tab slot="nav" class="header-nav" panel="home">Home</sl-tab>
+    <sl-tab slot="nav" class="header-nav" panel="guide">Guide</sl-tab>
+    <sl-tab slot="nav" class="header-nav" panel="resources">Resources</sl-tab>
+  
+    <sl-tab-panel name="home" class="page-content-container">
+      <div class="page-content">
+        <section id="welcome-section">
+          <div id="welcome-content-container">
+            <div id="welcome-image"></div>
+            <div id="welcome-content">
+              <h1>Hello! If you are seeking good information about abortion care later in pregnancy, you have come to a safe place.</h1>
+              <p>
+                Whatever brings you here, welcome. 
+                <br><br>
+                We hope this guide can help you navigate the information (and misinformation) online, to help you find an appointment, know what to expect, make decisions, and hopefully add some ease to your experience.
+                <br><br>
+                This guide has an array of articles on later abortions
+                <br><br>
+                You can download our full guide as a PDF, or begin building a custom guide. To export the full PDF now and leave this site, select the PRINT button. For an introduction to how this site works, press the START button.
+              </p>
+            </div>
+          </div>
+          <nav>
+            <button id="print-guide">Print</button>
+            <button id="start-intro" class="cta">Start</button>
+          </nav>
+        </section>
+    
+        <section id="about-section">
+          <h1>About this site</h1>
+          <p>
+            This guide has been made by small group of people who have experience with abortion care, particularly for people getting abortions later in pregnancy. Our group includes a physician who performs later abortions, practical support folks who help people travel to clinics and pay for their care, and patients who have had later abortions.
+          </p>
+          <h1>What do we mean when we say “later abortion”</h1>
+          <p>
+            Hundreds of thousands of people get abortions every year. This means that every year a LOT of people of people get abortions that can be called “later abortions”. If you are getting an abortion at this stage in pregnancy, know that you’re not alone. A “later abortion” is any abortion happening at 15 weeks into a pregnancy or later. It’s called a later abortion because statistically, the majority of abortions happen in the first few months of pregnancy. Therefore, any procedure after 15 weeks is considered “later” abortion.
+            <br>
+            There are so many reasons why people seek later abortion. One of the big reasons is that as more and more abortion bans are being passed all over the country, it is taking longer for people to get to their appointments because they can’t find an appointment close to home.
+          </p>
+          <h1>Finding Your 15wk+ Abortion i.e. “The Bop Around”</h1>
+          <p>
+            Finding and getting to a later abortion appointment can take a lot of phone calls, messages, and waiting for people to call you back. There’s a term for this within the abortion help network. It’s called “the bop around.” You might call two or three clinics before you are able to make an appointment. We know that this can feel really frustrating.
+            <br>
+            If you have any reason to think that your pregnancy has progressed past the first trimester, we highly recommend that you find your way to an abortion clinic. We know that can feel daunting but we encourage you to stick with it.
+            <br>
+            While you may find stories online of people who manage their 2nd trimester abortions themselves at home using pills: your risk of being criminalized, or punished by your state, grows exponentially as your pregnancy progresses. This is especially true for folks who are already at higher risks of being criminalized, particularly people of color. If you have specific questions about the legality of ending your pregnancy, please reach out to the folks at the Repro Legal Helpline: https://www.reprolegalhelpline.org/
+          </p>
+        </section>
+      </div>
+    </sl-tab-panel>
+
+    <sl-tab-panel name="guide">
+      <div class="page-content">
+        [guide content]
+      </div>
+    </sl-tab-panel>
+
+    <sl-tab-panel name="resources">
+      <div class="page-content">
+        [resource content]
+      </div>
+    </sl-tab-panel>
+  </sl-tab-group>
+
+  <script src="js/script.js"></script>
+</body>
+
+</html>

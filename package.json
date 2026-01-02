@@ -1,0 +1,16 @@
+{
+  "name": "patient-guide-static",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "local": "npx http-server ./dist/",
+    "build": "node workflows/build.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "showdown": "^2.1.0"
+  }
+}
