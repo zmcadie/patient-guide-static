@@ -5,7 +5,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "local": "npx http-server ./dist/",
-    "build": "node workflows/build.js"
+    "build": "node workflows/build.js",
+    "deploy": "push-dir --dir=dist --branch=gh-pages"
   },
   "author": "",
   "license": "ISC",
