@@ -142,7 +142,7 @@ button.cta:active {
 
 #welcome-image {
   align-self: stretch;
-  background: url(/images/welcome.svg) lightgray 50% / cover no-repeat;
+  background: url(../images/welcome.svg) lightgray 50% / cover no-repeat;
   max-height: 400px;
   width: 136px;
 }
