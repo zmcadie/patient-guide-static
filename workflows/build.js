@@ -61,20 +61,37 @@ const formatGuide = async (fileName) => {
   )
 }
 
+const formatResources = async (fileName) => {
+  const mdPath = `./content/${fileName}.md`
+  const guideHtml = await mdToHtml(mdPath).then(html => html.replaceAll(/>\s*\[i\]/g, "class='info-callout'>"))
+
+  return (
+    `<section id="resources-content">
+      ${guideHtml}
+    </section>`
+  )
+}
+
 const updateGuideContent = async () => {
-  const fileName = "guide_content"
+  const guideFileName = "guide_content"
+  const resourcesFileName = "guide_resources"
   const [
     indexHtml,
-    guideContent
+    guideContent,
+    guideResources
   ] = await Promise.all([
     readFile("./index.html", { encoding: "utf8" }),
-    formatGuide(fileName)
+    formatGuide(guideFileName),
+    formatResources(resourcesFileName)
   ])
 
-  const updatedIndex = indexHtml.replace(/\[guide content\]/, guideContent)
+  const updatedIndex = indexHtml
+    .replace(/\[guide content\]/, guideContent)
+    .replace(/\[resource content\]/, guideResources)
   
   await Promise.all([
-    writeFile(`./dist/${fileName}.html`, guideContent, { encoding: "utf8" }),
+    writeFile(`./dist/${guideFileName}.html`, guideContent, { encoding: "utf8" }),
+    writeFile(`./dist/${resourcesFileName}.html`, guideResources, { encoding: "utf8" }),
     writeFile(`./dist/index.html`, updatedIndex, { encoding: "utf8" })
   ])
 
