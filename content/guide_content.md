@@ -1,6 +1,6 @@
 # STEP 1: Make an Appointment
 
-It’s okay if you don’t know how to pay for an appointment, or how you will get to a clinic yet. Most people don’t. The first step is to make an appointment. 
+It’s okay if you don’t know how to pay for an appointment, or how you will get to a clinic yet. Most people don’t! The first step is to make an appointment. 
 
 ## Finding a clinic
 
